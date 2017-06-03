@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+    <string name="errormsg">Something is not right. Please try again.</string>
+    <!-- Sort type values used to decide which sort is required and proceed respectively-->
+    <string name="sortbypopular">popular</string>
+    <string name="sortbyrating">top_rated</string>
+
+    <!-- Menu Label names to show sort types  -->
+    <string name="sortPopularMenuLabel">Sort By Most Popular</string>
+    <string name="sortRatingMenuLabel">Sort By Highest Rated</string>
+
+    <!-- Intent extra key name to point the instance of movie user clicks on -->
+    <string name="intentextra_movie">currentmovie</string>
+
+    <!--Shared Preference File Name -->
+    <string name="moviesharedpreffile">moviesharedpref</string>
+    <!--Shared Preference field Name-->
+    <string name="sortbysharedpref">sortbysharedpref</string>
+
+
+
+</resources>

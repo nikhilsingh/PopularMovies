@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Number of colums the grid in Recycler view should create for movies list   -->
+    <integer name="moviegrid_columns">2</integer>
+
+</resources>
