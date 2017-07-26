@@ -1,13 +1,21 @@
 <resources>
     <string name="app_name">PopularMovies</string>
+
+    <!-- Error Messages-->
+    <string name="nodataerror">We cannot get the data right now.Please try again later.</string>
+    <string name="nointerneterror">It seems your device is offline. Please check your internet connection</string>
+    <string name="nofavouriteerror">No favourite movies added yet.</string>
+
     <string name="errormsg">Something is not right. Please try again.</string>
     <!-- Sort type values used to decide which sort is required and proceed respectively-->
     <string name="sortbypopular">popular</string>
     <string name="sortbyrating">top_rated</string>
+    <string name="showfavmovies">favourite_movies</string>
 
     <!-- Menu Label names to show sort types  -->
     <string name="sortPopularMenuLabel">Sort By Most Popular</string>
     <string name="sortRatingMenuLabel">Sort By Highest Rated</string>
+    <string name="favouriteMovieMenuLabel">Favourite Movies</string>
 
     <!-- Intent extra key name to point the instance of movie user clicks on -->
     <string name="intentextra_movie">currentmovie</string>
@@ -17,6 +25,10 @@
     <!--Shared Preference field Name-->
     <string name="sortbysharedpref">sortbysharedpref</string>
 
+
+
+
+    <string name="action_trailer_share">Share</string>
 
 
 </resources>

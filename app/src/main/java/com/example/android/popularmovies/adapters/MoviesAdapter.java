@@ -2,6 +2,7 @@ package com.example.android.popularmovies.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,9 +35,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
         int LayoutIdForGridItem = R.layout.moviegrid_item;
         LayoutInflater inflater = LayoutInflater.from(context);
         boolean shouldAttachToParentImmediately = false;
-
         View view = inflater.inflate(LayoutIdForGridItem, parent, shouldAttachToParentImmediately);
-
 
         return new MoviesViewHolder(view);
     }
@@ -45,7 +44,10 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
     public void onBindViewHolder(MoviesViewHolder holder, int position) {
 
         Movie holderMovie = mMoviesList.get(position);
-        Glide.with(holder.itemView.getContext()).load(holderMovie.getPosterUrl()).into(holder.mMovieImageIV);
+        Glide.with(holder.itemView.getContext())
+                .load(holderMovie.getPosterUrl())
+                .placeholder(R.drawable.ic_movie_filter_black_200dp)
+                .into(holder.mMovieImageIV);
     }
 
     @Override
@@ -63,6 +65,8 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
     }
 
     public void setMoviesList(ArrayList<Movie> movielist) {
+
+        Log.i(TAG,"setMoviesList starts"+movielist.size());
         mMoviesList = movielist;
         notifyDataSetChanged();
     }
@@ -78,6 +82,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Log.i(TAG,"Movie Id "+mMoviesList.get(getAdapterPosition()).getMovieId());
                     mClickHandler.onMovieClick(mMoviesList.get(getAdapterPosition()));
                 }
             });
